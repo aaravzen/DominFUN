@@ -1,6 +1,7 @@
+import sys
+sys.path.append("playercontrollers")
+
 from game_engine import GameEngine
-import cards
-#from cards.card import Card
 
 class FrontendController:
     """This is where the magic happens.
@@ -19,3 +20,9 @@ class FrontendController:
     uploaded custom AI PlayerControllers online). For now it's just gonna be a good ol' CLI"""
 
     # TODO: Make sure any PlayerControllers instantiated are actual subclasses of PlayerController
+
+    def __init__(self):
+        self.game_engine = GameEngine()
+
+if __name__ == '__main__':
+    FE = FrontendController()
